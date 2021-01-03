@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+     uri: mongodb+srv://admin:admin@cluster0.it8tb.mongodb.net/test?retryWrites=true&w=majority
+  application:
+    name: order-api
+server:
+  port: 8087
+api:
+  key:  api-key-here

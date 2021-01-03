@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+     uri: mongodb+srv://admin:admin@mongodbcluster.d2yve.mongodb.net/test?retryWrites=true&w=majority
+  application:
+    name: stock-api
+server:
+  port: 8089
+api:
+  key:  api-key-here
