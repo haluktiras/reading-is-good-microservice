@@ -1,0 +1,27 @@
+version: '2'
+services:
+  customer:
+    image: "customer"
+    build: ./customer-service
+    ports:
+      - "8080:8080"
+    hostname: customer
+    environment:
+      SECRET: secret
+    links:
+      - "db:mongo"
+  order:
+    build: ./order-service
+    ports:
+      - "8081:8081"
+    hostname: order
+    environment:
+      SECRET: secret
+    links:
+      - "db:mongo"
+      - "customer:customer"
+  db:
+    image: "mongo"
+    hostname: mongo
+    ports:
+      - "27017-27019:27017-27019"

@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: reading-is-good
-server:
-  port: 8086
-secret:
-  key: secret

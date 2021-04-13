@@ -1,0 +1,38 @@
+server:
+  port: 8081
+spring:
+  data:
+    mongodb:
+      host: mongo
+      port: 27017
+      database: mongo
+
+customer:
+  service:
+    host: customer:8080
+    path:
+      root: /customer-service/V1
+      checkExistence: /customer/existence
+
+security:
+  secret: ${SECRET}
+
+######-LOCAL-########
+#server:
+#  port: 8081
+#spring:
+#  data:
+#    mongodb:
+#      host: localhost
+#      port: 27017
+#      database: mongo
+#
+#customer:
+#  service:
+#    host: localhost:8080
+#    path:
+#      root: /customer-service/V1
+#      checkExistence: /customer/existence
+#
+#security:
+#  secret: secret
