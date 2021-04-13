@@ -1,0 +1,23 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: mongo
+server:
+  port: 8080
+security:
+  secret: secret
+
+
+#######-LOCAL-############
+#spring:
+#  data:
+#    mongodb:
+#      host: mongo
+#      port: 27017
+#      database: mongo
+#server:
+#  port: 8080
+#security:
+#  secret: ${SECRET}
