@@ -2,6 +2,9 @@
 
 Simple Book Store Retail Application Demonstration.
 
+[![CircleCI](https://circleci.com/gh/haluktiras/reading-is-good-microservice.svg?style=svg)](https://app.circleci.com/pipelines/github/haluktiras/reading-is-good-microservice)
+[![codecov](https://codecov.io/gh/haluktiras/reading-is-good-microservice/branch/master/graph/badge.svg?token=NTRBKLULTF)](https://codecov.io/gh/haluktiras/reading-is-good-microservice)
+
 ## 1. Customer Service
 
 Responsible for customer operations such as:
