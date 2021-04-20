@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "43390aa4-6adb-4cb8-8db2-4697bc1f1b9a",
+		"name": "reading-is-good-microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getir",
+			"item": [
+				{
+					"name": "new order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiYXR1cmF5IiwiZXhwIjoxNjA0MDgzNjIzLCJpYXQiOjE2MDQwNjU2MjN9.HqLIKlvyWMNCvcAgxXJ6UmdBqNtKcTpGCYpGnYTGp1I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"customerId\": \"1\",\n\"stockId\": \"1\",\n\"quantity\": 2,\n\"orderPlacedOn\": \"23/10/2020\",\n\"deliveryTargetDate\": \"23/10/2020\",\n\"orderStatus\": \"orderStatus\",\n\"totalPrice\": 12.0\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/order-service/V1/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"order-service",
+								"V1",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiYXR1cmF5IiwiZXhwIjoxNjA0MDgzNjIzLCJpYXQiOjE2MDQwNjU2MjN9.HqLIKlvyWMNCvcAgxXJ6UmdBqNtKcTpGCYpGnYTGp1I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/order-service/V1/order?orderId=5f9c525f0985c6352cb55cf9&",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"order-service",
+								"V1",
+								"order"
+							],
+							"query": [
+								{
+									"key": "orderId",
+									"value": "5f9c525f0985c6352cb55cf9"
+								},
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"baturay\",\n    \"password\": \"baturay\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8082/security-service/V1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"security-service",
+								"V1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkCustomerExistence",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/customer-service/V1/customer/existence?customerId=5f9bbff2df6cbe046e84e9d2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer-service",
+								"V1",
+								"customer",
+								"existence"
+							],
+							"query": [
+								{
+									"key": "customerId",
+									"value": "5f9bbff2df6cbe046e84e9d2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "newCustomer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiYXR1cmF5IiwiZXhwIjoxNjA0MTAzOTUzLCJpYXQiOjE2MDQwODU5NTN9.XFzMMKFlftvUM5Nig-PKcw-tpKf616BQV9ryU-xVnwM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"firstName\": \"Baturay\",\n\"lastName\": \"Ucer\",\n\"email\": \"email111132\",\n\"address\": \"address\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer-service/V1/customer/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer-service",
+								"V1",
+								"customer",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sign-up",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"baturay12w\",\n    \"password\": \"baturay1\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8082/security-service/V1/sign-up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"security-service",
+								"V1",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllOrders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/order-service/V1/all?customerId=5f9d33ff9d2660711d26d009",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"order-service",
+								"V1",
+								"all"
+							],
+							"query": [
+								{
+									"key": "customerId",
+									"value": "5f9d33ff9d2660711d26d009"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
